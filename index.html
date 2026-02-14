@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mehak ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #ff758c, #ff7eb3);
+  overflow-x: hidden;
+  color: white;
+  text-align: center;
+}
+
+/* Floating Hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  color: rgba(255,255,255,0.8);
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+}
+
+.hero h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  color: #ff4b6e;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Gallery */
+.gallery {
+  padding: 40px 20px;
+}
+
+.gallery h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.images img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Letter Section */
+.letter {
+  padding: 35px 20px;
+  margin: 25px 15px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.letter h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.letter p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Ending */
+.ending {
+  padding: 30px 20px;
+  font-size: 1rem;
+}
+
+@media(min-width: 600px){
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>For the Masi of Pranaya and Yuvi 💕</h1>
+  <p>And the most beautiful soul named Mehak ❤️</p>
+  <button onclick="scrollToGallery()">A Little Surprise for You</button>
+</div>
+
+<div class="gallery" id="gallery">
+  <h2>Moments That Make My Heart Smile 💖</h2>
+  <div class="images">
+    <img src="photo1.jpg" alt="Mehak">
+    <img src="photo2.jpg" alt="Mehak">
+    <img src="photo3.jpg" alt="Mehak">
+  </div>
+</div>
+
+<div class="letter">
+  <h2>To My Mehak 💌</h2>
+  <p>
+    You are not just the adorable masi who lights up Pranaya and Yuvi’s world…  
+    you are the girl who quietly lights up mine. ❤️  
+    <br><br>
+    Your laughter feels like home.  
+    Your smile makes everything softer.  
+    And your presence makes even ordinary days feel special.  
+    <br><br>
+    I admire your warmth, your kindness, and the love you give so effortlessly.  
+    Watching you care for everyone around you just makes me fall for you even more.
+  </p>
+</div>
+
+<div class="ending">
+  Enjoy your brother’s wedding to the fullest 💃✨  
+  Dance your heart out, smile endlessly, and shine the way only you can.  
+  <br><br>
+  Lots of love, always and forever ❤️  
+</div>
+
+<script>
+function scrollToGallery() {
+  document.getElementById("gallery").scrollIntoView({ behavior: "smooth" });
+}
+
+/* Floating hearts */
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 15 + "px";
+  heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>
